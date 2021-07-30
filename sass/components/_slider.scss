@@ -1,0 +1,96 @@
+.slider {
+    max-width: 80%;
+    height: 65rem;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    transition: all 1s;
+    @include hideSection;
+
+    &__heading {
+        text-align: center;
+        width: 30%;
+        margin: 5rem auto;
+
+        @include respond(phone) {
+            width: 50%;
+        }
+    }
+
+    &__container{
+
+        &-box {
+
+            &--1 {
+                border-radius: $default-border-radius;
+                background-image: linear-gradient(
+                    to top,
+                    rgba($color-white, .5),
+                    rgba($color-white, .5)),
+                    url('/img/run-2.jpeg');
+                    background-size: cover;
+                    height: 100%;
+                    width: 100%;
+            }
+
+            &--2 {
+                border-radius: $default-border-radius;
+                background-image: linear-gradient(
+                    to top,
+                    rgba($color-white, .5),
+                    rgba($color-white, .5)),
+                    url('/img/cycle.jpeg');
+                    background-size: cover;
+                    height: 100%;
+                    width: 100%;
+            }
+
+            &--3 {
+                border-radius: $default-border-radius;
+                background-image: linear-gradient(
+                    to top,
+                    rgba($color-white, .5),
+                    rgba($color-white, .5)),
+                    url('/img/community.jpeg');
+                    background-size: cover;
+                    height: 100%;
+                    width: 100%;
+            }
+
+        }
+
+        &-content {
+            width: 65%;
+            background-color: rgba($color-dark-grey, .9);
+            text-align: center;
+            padding: 8rem 1rem;
+            border-radius: $default-border-radius;
+            margin: auto;
+            margin-top: 15%;
+        }
+
+    }
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    transition: all 1s;
+
+    &--1 {
+        transform: translate(0%);
+    }
+
+    &--2 {
+        transform: translate(100%);
+    }
+
+    &--3 {
+        transform: translate(200%);
+    }
+
+}

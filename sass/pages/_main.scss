@@ -1,0 +1,102 @@
+.section-signUp {
+    padding: 35rem 0;
+    background-image: linear-gradient(
+        to right top,
+        rgba($color-primary-light, 0.8),
+        rgba($color-primary-dark, 0.8)),
+        url('/img/run.jpg');
+    background-size: cover;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+    position: relative;
+
+    @include respond(tab-port) {
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        padding: 30rem 0;
+    }
+
+}
+
+.section-main {
+    padding: 30rem 0;
+    background-image: url('/img/whiteBack.jpg');
+    background-size: cover;
+    margin-top: -20rem;
+
+    @include respond(tab-port) {
+        margin-top: -8rem;
+        padding: 10rem 0;
+    }
+
+}
+
+.main-box {
+    opacity: 0;
+    padding: 18rem 3rem;
+    border-radius: .5rem;
+    text-align: center;
+    background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+    transition: opacity 2s, transform .4s;   
+    box-shadow: 0 1.5rem 3rem rgba($color-black, .4);
+
+    &__icon {
+        font-size: 5rem;
+        display: inline-block;
+        margin-bottom: 3rem;
+        width: 80%;
+        border-bottom: 1px solid $color-white;
+        color: $color-white;
+    }
+
+    &__text {
+        font-size: $default-font-size;
+        font-weight: 600;
+    }
+
+    &:hover {
+        transform: translateY(-1rem) scale(1.05);
+        background-image: (to right top, $color-white, $color-black);
+        color: $color-white;
+        box-shadow: 0 2.5rem 3rem rgba($color-black, .4);
+    }
+
+    &:hover &__icon {
+        border-bottom: 1px solid $color-black;
+        color: $color-black;
+    }
+}
+
+.section-showcase {
+    opacity: 0;
+    transform: translateY(10rem);
+    transition: all .8s;
+    padding: 40rem 0;
+    background-image: linear-gradient(
+        to top,
+        rgba($color-white, .5),
+        rgba($color-white, .5)),
+    url('/img/maptyMarketing.PNG');
+    background-size: cover;
+    position: relative;
+}
+
+.section-outro {
+    padding: 35rem 0;
+    background-image: url('/img/whiteBack.jpg');
+    background-size: cover;
+
+    @include respond(tab-land) {
+        padding: 10rem 0;
+    }
+}
+
+.section-challanges {
+    background-image: url('/img/whiteBack.jpg');
+    background-size: cover;
+    padding: 15rem 0;
+
+    @include respond(tab-land) {
+        padding: 5rem 0;
+    }
+}

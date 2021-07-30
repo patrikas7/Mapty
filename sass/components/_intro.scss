@@ -1,0 +1,63 @@
+.intro {
+    margin-left: 8rem;
+    position: absolute;
+    top: 10rem;
+
+    @include respond(phone) {
+        top: 5rem;
+        margin-left: 0;
+    }
+
+    &__heading {
+        @include respond(phone) {
+            text-align: center;
+        }
+    }
+
+    &__heading-icon {
+        width: 12rem;
+        height: .8rem;
+        background-color: $color-white; 
+        display: inline-block;
+    }
+    
+    &__paragraph {
+        width: 40%;
+
+        @include respond(phone) {
+            width: 100%;
+            text-align: center;
+        }
+
+        &--logIn {
+
+            p {
+                color: $color-white;
+                font-size: $default-font-size;
+                display: inline-block;
+            }
+        }
+
+        &--store {
+            position: relative;
+        }
+    }
+}
+
+.play-store {
+    width: 30%;
+    position: absolute;
+    left: -2rem;
+
+    @include respond(phone) {
+        width: 25%;
+        text-align: center;
+        left: 50%;
+        transform: translateX(-50%);
+
+    }
+
+    &:hover {
+        transform: translateY(-.5rem);
+    }
+}

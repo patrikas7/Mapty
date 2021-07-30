@@ -1,0 +1,11 @@
+.arrow {
+    color: $color-dark-grey;
+
+    &--left {
+        @include setArrow(left);
+    }
+
+    &--right {
+        @include setArrow(right);
+    }
+}

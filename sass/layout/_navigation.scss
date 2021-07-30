@@ -1,0 +1,86 @@
+.navigation {
+    
+    @include respond(not-phone) {
+        display: none;
+    }
+
+    &__button {
+        @include createCircle(6rem);
+        position: fixed;
+        background-color: $color-white;
+        right: 3rem;
+        top: 4rem;
+        z-index: 200;
+        text-align: center;
+        line-height: 1rem;
+    }
+
+    &__background {
+        @include createCircle(6rem);
+        position: fixed;
+        background-image: radial-gradient($color-light-green, $color-primary-light);
+        right: 3rem;
+        top: 4rem;
+        z-index: 100;
+        transition: all 0.8s;
+    }
+
+    &__button-line {
+        @include absCenter;
+        width: 3rem;
+        height: 2px;
+        background-color: $color-black;
+        display: inline-block;
+        transition: all .2s;
+
+        &--1 {
+            top: 2rem;
+        }
+
+        &--3 {
+            top: 4rem;
+        }
+    }
+
+    &__content {
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 101;
+        width: 100%;
+        opacity: 0;
+        display: none;
+        
+    
+        &-list {
+            @include absCenter;
+            list-style: none;
+            text-align: center;
+            line-height: 10rem;
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+        color: $color-white;
+        font-size: 4rem;
+    }
+}
+
+.rotate-first {
+    top: 3rem;
+    left: 1.5rem;
+    transform: rotate(135deg);
+}
+
+.rotate-second {
+    top: 3rem;
+    left: 1.5rem;
+    transform: rotate(-135deg);
+}
+
+.show-navigation {
+    opacity: 1;
+    display: block;
+}

@@ -1,0 +1,14 @@
+{
+  "name": "mapty",
+  "version": "1.0.0",
+  "description": "Landing page for mapty web app",
+  "main": "index.js",
+  "scripts": {
+    "compile:sassMapty" : "node-sass sass/main-style.scss css/main-style.css -w"
+  },
+  "author": "Patrikas Voicechovski",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^6.0.1"
+  }
+}

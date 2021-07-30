@@ -1,0 +1,53 @@
+.outro {
+    padding: 10rem 5rem;
+    width: 45%;
+    margin: 0 auto;
+    text-align: center;
+    background-color: rgba($color-light-green, .2);
+    border-radius: $default-border-radius;
+    transition: all .5s;
+    @include hideSection;
+
+    @include respond(tab-land) {
+        padding: 12rem 2rem;
+        width: 65%;
+    }
+
+    @include respond(phone) {
+        width: 90%;
+        padding: 8rem 2rem;
+    }
+}
+
+.city-list {
+    border-top: 1px solid $color-black;
+    list-style-type: none;
+    padding-top: 2rem;
+    height: 20rem;
+
+    @include respond(tab-land) {
+        height: 15rem;
+    }
+
+    &-item {
+        transition: all .2s;
+
+        &:not(:first-child) {
+            margin-top: 1rem;
+        }
+
+        &:hover {
+            transform: translateY(-.5rem);
+        }
+    }
+
+    &-link {
+
+        &:visited, &:link {
+            text-decoration: none;
+            font-size: $default-font-size;
+            color: $color-black;
+        }
+    }
+
+}

@@ -1,0 +1,50 @@
+.footer {
+
+    &__header {
+        @include hideSection(5rem);
+        background-image: url('/img/black-back.png');
+        height: 8rem;
+        border-bottom: 1px solid $color-white;
+        position: relative;
+        transition: all .8s;
+
+        &-list {
+            @include absCenter;
+            display: inline-block;
+        }
+    }
+
+    &__content {
+        background-image: url('/img/black-back.png');
+        height: 15rem;
+
+        &-list {
+            list-style: none;
+            padding: 2rem 0;
+        }
+    }
+
+    &__logo-box {
+        height: 100%;
+        padding: 2rem 2rem;
+        display: inline-block;
+    }
+
+    &__logo {
+        height: 100%;
+    }
+
+    &__item {
+        margin-top: .5rem;
+    }
+
+    &__link {
+
+        &:link, &:visited {
+            text-decoration: none;
+            color: $color-light-grey;
+            font-size: 1.2rem;
+            
+        }
+    }
+}

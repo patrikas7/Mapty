@@ -1,0 +1,21 @@
+.dots-container {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.dot {
+    @include createCircle(1rem);
+    display: inline-block;
+    background-color: $color-white;
+
+    &:not(:last-child) {
+        margin-right: 1.5rem;
+    }
+
+    &--active {
+        background-color: $color-dark-grey;
+    }
+}

@@ -1,0 +1,72 @@
+@mixin absCenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin clearfix {
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin respond($breakpoint) {
+    
+    @if $breakpoint == phone {
+        @media (max-width: 37.5em) {
+            @content;
+        }
+    }
+
+    @if $breakpoint == tab-port {
+        @media (max-width: 56.25em) {
+            @content;
+        }
+    }
+
+    @if $breakpoint == tab-land {
+        @media (max-width: 75em) {
+            @content;
+        }
+    }
+
+    @if $breakpoint == big-desktop {
+        @media (min-width: 112.5em) {
+            @content;
+        }
+    }
+
+    @if $breakpoint == not-phone {
+        @media (min-width: 37.5em) {
+            @content;
+        }
+    }
+}
+
+@mixin setArrow($side) {
+    font-size: 6rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    #{$side}: 3%;
+    transition: all .2s;
+
+    &:hover {
+        cursor: pointer;
+        transform: translateY(-50%) translateY(-10%);
+    }
+}
+
+@mixin createCircle($width) {
+    width: $width;
+    height: $width;
+    border-radius: 50%;
+}
+
+@mixin hideSection($translateHeight: 10rem) {
+    opacity: 0;
+    transform: translateY($translateHeight);
+}

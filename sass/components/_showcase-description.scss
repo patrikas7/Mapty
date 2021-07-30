@@ -1,0 +1,31 @@
+.showcase-description {
+    position: absolute;
+    right: 0;
+    transform: translate(-20%, -50%);   
+    width: 40%;
+    padding: 8rem 6rem;
+    background-color: rgba($color-white, 0.8);
+    border-radius: $default-border-radius;
+
+    @include respond(tab-port) {
+        @include absCenter;
+        width: 60%;
+    }
+    
+    @include respond(phone) {
+        width: 80%;
+        padding: 4rem 4rem;
+    }
+
+    &-icon {
+        width: 40%;
+        height: 1rem;
+        background-color: $color-dark-grey;
+        display: inline-block;
+
+        &--small {
+            width: 30%;
+            height: .8rem;
+        } 
+    }
+}

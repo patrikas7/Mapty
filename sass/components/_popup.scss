@@ -1,0 +1,58 @@
+.popup {
+    @include absCenter;
+    
+    height: 100%;
+    width: 100%;
+    background-color: rgba($color-black, .8);
+    position: fixed;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .8s;
+
+    &__content {
+        @include absCenter;
+
+        width: 50%;
+        background-image: linear-gradient(105deg, rgba($color-white, .9) 0%, rgba($color-white, .9) 55%, transparent 55%), url('/img/run-2.jpeg');
+        border-radius: 3px;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .2);
+        background-size: cover;
+        height: 50rem;
+
+        &--signup {
+            height: 60rem;
+        }
+
+        @include respond(tab-land) {
+            width: 65%;
+        }
+
+        @include respond(tab-port) {
+            width: 75%;
+        }
+    }
+
+    &__form {
+        width: 50%;
+        padding: 6rem;
+
+        @include respond(phone) {
+            width: 100%;
+        }
+    }
+
+    &__close {
+        position: absolute;
+        text-decoration: none;
+        font-size: 3.5rem;
+        color: $color-white;
+        top: 0;
+        right: 2%;
+
+        &:hover {
+            transition: all .2s;
+            color: $color-light-green;
+            transform: scale(1.2);
+        }
+    }
+}

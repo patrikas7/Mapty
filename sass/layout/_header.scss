@@ -1,0 +1,67 @@
+.header {
+    background-color: $color-dark-grey;
+    position: relative;
+
+    @include respond(phone) {
+        display: none;
+    }
+
+    &__logo-box {
+        padding: 2rem;
+        display: inline-block;
+    }
+
+    &__logo {
+        height: 5.5rem;
+    }
+
+    &__list {
+        @include absCenter;
+        list-style: none;
+    }
+
+    &__item {
+        display: inline;
+        margin-left: 4rem;
+
+        @include respond(tab-land) {
+            margin-left: 1rem;
+        }
+    }
+
+    &__link {
+
+        &:link, &:visited {
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 1.7rem;
+            color: white;
+            background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $color-light-green 50%);
+            background-size: 240%; 
+            padding: .5rem  1rem;
+            display: inline-block;
+            transition: all .4s;  
+
+            @include respond(tab-land) {
+                font-size: 1.5rem;
+                padding: 0;
+            }
+        }
+
+        &:hover, &:active {
+            background-position: 100%;
+            transform: translateY(-.5rem);
+        }
+    }
+
+    &__buttons {
+        position: absolute;
+        right: 2rem;
+        top: 50%;
+        transform: translateY(-50%);
+
+        @include respond(tab-port) {
+            right: .5rem;
+        }
+    }
+}

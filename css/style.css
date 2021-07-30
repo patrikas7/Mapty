@@ -1,0 +1,184 @@
+.side-bar{
+    background-color: #2d3439;
+    height: 95vh;
+}
+
+#map{
+    background-color: #aaa;
+    z-index: 0;
+}
+
+.workout-form{
+    background-color: #42484d;
+    border-radius: 5px;
+    color: #ececec;
+    font-size: 1rem;
+    height: 100px;
+    position: relative;
+    display: none;
+}
+
+.input{
+    background-color: rgb(214, 222, 224);
+    border: none;
+    border-radius: 3px;
+    width: 80px;
+    height: 30px;
+}
+
+.success-alert{
+    display: none;
+}
+
+.icon, .icon2{
+    position: absolute;
+    color: #aaa;
+    font-size: 80%;
+    top: 7px;
+    right: 30px;
+}
+
+.left-icon {
+    position: absolute;
+    color: #aaa;
+    top: 2%;
+    right: 5%;
+    font-size: 20px;
+}
+
+.close-icon{
+    color: #aaa;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+}
+
+.sort-btn{
+    color: white !important;
+    background-color: #42484d !important;
+    border-left: 5px solid #0076c4 !important;
+    width: 50%;
+}
+
+.delete-btn{
+    color: white !important;
+    background-color: #42484d !important;
+    border-left: 5px solid #f5562e !important;
+    width: 50%;
+}
+
+.icon2{
+    right: 10px;
+}
+
+.workout-grid-row{
+    margin-bottom: -30px;
+}
+
+.workout-details{
+    border-radius: 5px;
+    color: #ececec;
+    background-color: #42484d;
+    font-size: 1rem;
+    height: 100px;
+    position: relative;
+}
+
+.workout-Running{
+    border-left: 5px solid #00c46a;
+}
+
+.workout-Cycling{
+    border-left: 5px solid #ffb545;
+}
+
+
+.workout-unit{
+    color: #aaa;
+    font-size: 0.8rem;
+}
+
+.workout-date{
+    margin-left: 20px;
+}
+
+::placeholder{
+    text-align: center;
+}
+
+.activity{
+    height: 80%;
+}
+
+.leaflet-popup-content-wrapper{
+    background: #2d3439 !important;
+    border-radius: 5px !important;
+}
+
+.leaflet-popup-content{
+    color: #ececec;
+    font-size: 15px;
+    text-align: center;
+}
+
+.popUpRunning .leaflet-popup-content-wrapper{
+    border-left: 5px solid #00c46a;
+}
+
+.popUpCycling .leaflet-popup-content-wrapper{
+    border-left: 5px solid #ffb545;
+}
+
+.modal-header{
+    border-bottom: none !important;
+}
+
+.modal-content{
+    background-color: #2d3439 !important;
+}
+
+.modal-footer{
+    border-top: none !important;
+}
+
+.delete-confirmation-btn{
+    color: white !important;
+    background-color: #f5562e !important;
+    width: 150px;
+}
+
+.close-confirmation-btn{
+    color: white !important;
+    background-color: #00c46a !important;
+    width: 150px ;
+}
+
+.weather-box {
+    background-color: rgba(45, 52, 57, .85);
+    height: 15%;
+    width: 20%;
+    z-index: 1000;
+    top: 3%;
+    right: 3%;
+    border-radius: 20px;
+}
+
+.weather-box__header {
+    color: white;
+    padding: 20px;
+    position: relative;
+}
+
+.refresh-icon {
+    color: white;
+    font-size: 15px;
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    z-index: 1000;
+}
+
+.weather-box__details {
+    color: white;
+}
+
